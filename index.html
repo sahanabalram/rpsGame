@@ -10,12 +10,23 @@
     <div id="game">
     </div>
     <script type="text/javascript">
-    /* Logic of the Game
-        Rock wins against scissors loses against paper and ties against itself 
-        Paper wins against rock loses against scissors and ties against itself
-        Scissors wins against paper loses against rock and ties against itself
-        Tie happens if two objects are the same */
-   
+        /* Logic of the Game
+                // ROCK Logic and Score increase
+                Rock wins against scissors: increase  wins score by 1
+                loses against paper: increase lose score by 1 
+                ties against itself :tie score increased by 1
+
+                // PAPER Logic and Score increase
+                Paper wins against rock: increase wins score by 1
+                loses against scissors : increase loses score by 1
+                ties against itself: increase ties score by 1
+
+                // Scissors Logic and Score increase
+                Scissors wins against paper : increase wins score by 1
+                loses against rock : increase loses score by 1
+                and ties against itself : increase ties score by 1
+        */
+
         // Whenever a key is pressed, alert "pressed a button".
         document.onkeyup = function () {
             alert("pressed a button");
