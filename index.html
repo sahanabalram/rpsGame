@@ -50,6 +50,12 @@
                     wins++;
                 } else if ((userGuess === 'r') && (computerChoices === 'p')) {
                     loses++;
+                } else if((userGuess === 'p') && (computerChoices === 'r')) {
+                    wins++;
+                } else if((userGuess === 'p') && (computerChoices === 's')) {
+                    loses++;
+                } else if((userGuess === 's') && (computerChoices === 'p')) {
+                    wins++;
                 }
             }
 
