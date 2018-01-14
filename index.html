@@ -10,12 +10,19 @@
     <div id="game">
     </div>
     <script type="text/javascript">
+    // What do I need?
+        // User Input
+        // Conditional Checks
+        // user choice
         // Whenever a key is pressed, alert "pressed a button".
         document.onkeyup = function () {
             alert("pressed a button");
         };
         // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
         var computerChoices = ["r", "p", "s"];
+        var wins = 0;
+        var loses = 0;
+        var ties = 0;
         // This function is run whenever the user presses a key.
         document.onkeyup = function (event) {
             // Determines which key was pressed.
@@ -24,7 +31,7 @@
             var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
             // Run the code only if r,p,s is pressed by the user.
-            if (userGuess === 'p' || userGuess === 's' || userGuess === 'r') {
+            if ((userGuess === 'p') || (userGuess === 's') || (userGuess === 'r')) {
                 // Alerts the key the user pressed (userGuess).
                 alert("User guess: " + userGuess);
                 // Alerts the Computer's guess.
