@@ -11,21 +11,21 @@
     </div>
     <script type="text/javascript">
         /* Logic of the Game
-                // ROCK Logic and Score increase
-                Rock wins against scissors: increase  wins score by 1
-                loses against paper: increase lose score by 1 
-                ties against itself :tie score increased by 1
+                        // ROCK Logic and Score increase
+                        Rock wins against scissors: increase  wins score by 1
+                        loses against paper: increase lose score by 1 
+                        ties against itself :tie score increased by 1
 
-                // PAPER Logic and Score increase
-                Paper wins against rock: increase wins score by 1
-                loses against scissors : increase loses score by 1
-                ties against itself: increase ties score by 1
+                        // PAPER Logic and Score increase
+                        Paper wins against rock: increase wins score by 1
+                        loses against scissors : increase loses score by 1
+                        ties against itself: increase ties score by 1
 
-                // Scissors Logic and Score increase
-                Scissors wins against paper : increase wins score by 1
-                loses against rock : increase loses score by 1
-                and ties against itself : increase ties score by 1
-        */
+                        // Scissors Logic and Score increase
+                        Scissors wins against paper : increase wins score by 1
+                        loses against rock : increase loses score by 1
+                        and ties against itself : increase ties score by 1
+                */
 
         // Whenever a key is pressed, alert "pressed a button".
         document.onkeyup = function () {
@@ -44,9 +44,13 @@
             var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
 
             // Run the code only if r,p,s is pressed by the user.
-            if ((userGuess === 'p') || (userGuess === 's') || (userGuess === 'r')) {
+            if ((userGuess === 'r') || (userGuess === 'p') || (userGuess === 's')) {
                 // Game Logic
-
+                if ((userGuess === 'r') && (computerChoices === 's')) {
+                    wins++;
+                } else if ((userGuess === 'r') && (computerChoices === 'p')) {
+                    loses++;
+                }
             }
 
         };
@@ -55,3 +59,12 @@
 </body>
 
 </html>
+
+// Creating a variable to hold our new HTML. Our HTML now keeps track of the user and computer guesses, and wins/losses/ties.
+var html = "
+<p>You chose: " + userGuess + "</p>" + "
+<p>The computer chose: " + computerGuess + "</p>" + "
+<p>wins: " + wins + "</p>" + "
+<p>losses: " + losses + "</p>" + "
+<p>ties: " + ties + "</p>"; // Set the inner HTML contents of the #game div to our html string document.querySelector("#game").innerHTML
+= html; }
