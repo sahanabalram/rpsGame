@@ -10,10 +10,12 @@
     <div id="game">
     </div>
     <script type="text/javascript">
-    // What do I need?
-        // User Input
-        // Conditional Checks
-        // user choice
+    /* Logic of the Game
+        Rock wins against scissors loses against paper and ties against itself 
+        Paper wins against rock loses against scissors and ties against itself
+        Scissors wins against paper loses against rock and ties against itself
+        Tie happens if two objects are the same */
+   
         // Whenever a key is pressed, alert "pressed a button".
         document.onkeyup = function () {
             alert("pressed a button");
@@ -32,14 +34,13 @@
 
             // Run the code only if r,p,s is pressed by the user.
             if ((userGuess === 'p') || (userGuess === 's') || (userGuess === 'r')) {
-                // Alerts the key the user pressed (userGuess).
-                alert("User guess: " + userGuess);
-                // Alerts the Computer's guess.
-                alert("Computer guess: " + computerGuess);
+                // Game Logic
+
             }
 
         };
     </script>
+    <h2>Press r,p or s to play again</h2>
 </body>
 
 </html>
